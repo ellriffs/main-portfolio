@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.header{
+box-sizing: border-box;
+position: absolute;
+width: 100%;
+height: 55px;
+left: 0px;
+top: 0px;
+background: #000000;
+border: 1px solid #2D2A2A;
+}
+
+.container{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10% 10% 10% 68% ;
+  color: white;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.about{
+  margin: 0;
+  grid-column-start: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog{
+  margin: 0;
+    grid-column-start: 2;
+    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio{
+  margin: 0;
+  grid-column-start: 3;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  margin: 0;
+  grid-column-start: 4;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.contact:hover, .portfolio:hover, .blog:hover, .about:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
