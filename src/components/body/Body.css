@@ -7,7 +7,6 @@
   height: 278px;
   left: 352px;
   top: 52px;
-  
   font-family: 'Post No Bills Jaffna Light';
   font-style: normal;
   font-weight: 300;
@@ -15,8 +14,17 @@
   line-height: 299px;
   
   color: rgba(242, 236, 236, 0.49);
-  
-  
+}
+
+.icon-container{
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  height: fit-content;
+  left: 350px;
+  top: 640px;
+  color: rgba(242, 236, 236, 0.49);
 }
 
 .secondName{

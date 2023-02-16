@@ -1,28 +1,29 @@
-import "./Header.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import * as React from 'react'
+import './Header.css'
+import { useNavigate, useLocation } from 'react-router-dom'
 
-const Header = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const pathName = location.pathname === "/about" ? "/home" : "/about";
+const Header: React.FC = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+  const pathName = location.pathname === '/about' ? '/' : '/about'
 
-  const handleAbout = () => {
-    return navigate(pathName);
-  };
+  const handleAbout: VoidFunction = () => {
+    navigate(pathName)
+  }
 
   return (
     <>
-      <div className="header">
-        <div className="container">
-          <p onClick={handleAbout} className="about">
-            {location.pathname === "/about" ? "HOME" : "ABOUT"}
+      <div className='header'>
+        <div className='container'>
+          <p onClick={handleAbout} className='about'>
+            {location.pathname === '/about' ? 'HOME' : 'ABOUT'}
           </p>
-          <p className="blog">BLOG</p>
-          <p className="portfolio">PORTFOLIO</p>
-          <p className="contact">CONTACT</p>
+          <p className='blog'>BLOG</p>
+          <p className='portfolio'>PORTFOLIO</p>
+          <p className='contact'>CONTACT</p>
         </div>
       </div>
     </>
-  );
-};
-export default Header;
+  )
+}
+export default Header
