@@ -15,7 +15,7 @@ border: 1px solid #2D2A2A;
 .container{
   height: 100%;
   display: grid;
-  grid-template-columns: 10% 10% 10% 68% ;
+  grid-template-columns: 10% 10% 10% 10% 58% ;
   color: white;
   font-family: 'Inter';
   font-style: normal;
@@ -51,16 +51,25 @@ border: 1px solid #2D2A2A;
   align-items: center;
 }
 
-.contact{
+.home{
   margin: 0;
   grid-column-start: 4;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  margin: 0;
+  grid-column-start: 5;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.contact:hover, .portfolio:hover, .blog:hover, .about:hover{
+.contact:hover, .portfolio:hover, .blog:hover, .about:hover, .home:hover{
   cursor: pointer;
   opacity: 0.8;
 }

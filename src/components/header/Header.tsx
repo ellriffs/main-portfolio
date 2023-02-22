@@ -5,10 +5,26 @@ import { useNavigate, useLocation } from 'react-router-dom'
 const Header: React.FC = () => {
   const navigate = useNavigate()
   const location = useLocation()
-  const pathName = location.pathname === '/about' ? '/' : '/about'
+  const headerName = location.pathname !== '/'
+
+  const handleHome: VoidFunction = () => {
+    navigate('/')
+  }
+
+  const handleContact: VoidFunction = () => {
+    navigate('/contact')
+  }
+
+  const handlePortfolio: VoidFunction = () => {
+    navigate('/portfolio')
+  }
 
   const handleAbout: VoidFunction = () => {
-    navigate(pathName)
+    navigate('/about')
+  }
+
+  const handleBlog: VoidFunction = () => {
+    navigate('/blog')
   }
 
   return (
@@ -16,11 +32,22 @@ const Header: React.FC = () => {
       <div className='header'>
         <div className='container'>
           <p onClick={handleAbout} className='about'>
-            {location.pathname === '/about' ? 'HOME' : 'ABOUT'}
+            ABOUT
           </p>
-          <p className='blog'>BLOG</p>
-          <p className='portfolio'>PORTFOLIO</p>
-          <p className='contact'>CONTACT</p>
+          <p onClick={handleBlog} className='blog'>
+            BLOG
+          </p>
+          <p onClick={handlePortfolio} className='portfolio'>
+            PORTFOLIO
+          </p>
+          {headerName && (
+            <p onClick={handleHome} className='home'>
+              HOME
+            </p>
+          )}
+          <p onClick={handleContact} className='contact'>
+            CONTACT
+          </p>
         </div>
       </div>
     </>

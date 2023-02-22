@@ -1,14 +1,14 @@
-import Header from "../../components/header/Header";
-import Body from "../../components/body/Body";
-import About from "../about/About";
+import * as React from 'react'
+import Header from '../../components/header/Header'
+import Body from '../../components/body/Body'
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <Header />
       <Body />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
